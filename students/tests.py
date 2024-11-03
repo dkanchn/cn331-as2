@@ -15,8 +15,8 @@ class StudentViewsTest(TestCase):
         self.course = Course.objects.create(
             code="CS101",
             name="Test Course",
-            semester="1/2564",
-            year=2023,  # ระบุค่า year ที่จำเป็น
+            semester="1",
+            year=2567,  # ระบุค่า year ที่จำเป็น
             seats=30,
             available_seats=10,
             available=True
@@ -49,8 +49,8 @@ class StudentViewsTest(TestCase):
         response = self.client.post(reverse('add_course'), {
             'code': 'CS102',
             'name': 'New Course',
-            'semester': '1/2565',
-            'year': 2023,
+            'semester': '1',
+            'year': 2567,
             'seats': 20,
             'available_seats': 20,
         })
@@ -85,8 +85,8 @@ class StudentURLsTest(TestCase):
         self.course = Course.objects.create(
             code="CS101",
             name="Test Course",
-            semester="1/2564",
-            year=2023,  # ระบุค่า year ที่จำเป็น
+            semester="1",
+            year=2567,  # ระบุค่า year ที่จำเป็น
             seats=30,
             available_seats=10,
             available=True
@@ -109,8 +109,8 @@ class StudentURLsTest(TestCase):
         response = self.client.post(reverse('add_course'), {
             'code': 'CS102',
             'name': 'New Course',
-            'semester': '1/2565',
-            'year': 2023,
+            'semester': '1',
+            'year': 2567,
             'seats': 20,
             'available_seats': 20,
         })
@@ -137,9 +137,9 @@ class StudentModelsTest(TestCase):
         self.user = User.objects.create_user(username='testuser', password='password')
         self.course = Course.objects.create(
             code="CS101",
-            name="Computer Science 101",
+            name="Computer Science",
             semester="1",
-            year=2564,
+            year=2567,
             seats=30,
             available_seats=10,
             available=True
@@ -155,14 +155,14 @@ class StudentModelsTest(TestCase):
     def test_course_creation(self):
         # ทดสอบว่าข้อมูลในโมเดล Course ถูกต้อง
         self.assertEqual(self.course.code, "CS101")
-        self.assertEqual(self.course.name, "Computer Science 101")
+        self.assertEqual(self.course.name, "Computer Science")
         self.assertEqual(self.course.seats, 30)
         self.assertEqual(self.course.available_seats, 10)
         self.assertTrue(self.course.available)
 
     def test_course_str(self):
         # ทดสอบการทำงานของ __str__ method
-        self.assertEqual(str(self.course), "CS101 - Computer Science 101")
+        self.assertEqual(str(self.course), "CS101 - Computer Science")
 
     def test_refund_seat(self):
         # ทดสอบการทำงานของ refund_seat method
