@@ -11,3 +11,5 @@
     dashboard >> รายวิชาที่เปิดให้ขอ, สถานะการขอโควต้า
 
 ลิ้งคลิปการใช้งาน: https://youtu.be/0344C43Rr4k
+
+deploy: leoaugust.pythonanywhere.com
