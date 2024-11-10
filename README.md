@@ -12,4 +12,4 @@
 
 ลิ้งคลิปการใช้งาน: https://youtu.be/0344C43Rr4k
 
-Cloud deploy: [Quota Enroll](leoaugust.pythonanywhere.com)
+Cloud deploy: [leoaugust.pythonanywhere.com](https://leoaugust.pythonanywhere.com/users/login/)
